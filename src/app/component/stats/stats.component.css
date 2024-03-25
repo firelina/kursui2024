@@ -1,0 +1,29 @@
+.consumer-title,
+.bankomat,
+.clerk,
+.agent
+{
+  height: 60px;
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  font-size: 21px;
+}
+.bankomat {
+  background-color: black;
+}
+.clerk {
+  background-color: black;
+  border-radius: 50%;
+}
+.agent {
+  background-color: black;
+  border-radius: 50%;
+}
+
+.my-text{
+  font-size: 26px;
+  font-style: italic;
+}
+

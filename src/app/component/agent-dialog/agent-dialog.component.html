@@ -1,0 +1,96 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">{{dialogTitle}}</h4>
+</div>
+<div class="modal-body container-fluid">
+  <div class="modal-body container-fluid">
+    <form [formGroup] = formGroup>
+      <div class="mb-3">
+        <label for="prefTitle">Наименование</label>
+        <div class="form-group input-group mb-3">
+          <input class="form-control border-dark"
+                 id="prefTitle"
+                 formControlName="prefTitle"
+                 autocomplete="off"
+                 placeholder="Наименование"
+                 required
+                 type="text"
+                 [ngClass]="{ 'field-error': getPrefTitleField.errors }"
+          >
+          <button
+            *ngIf="getPrefTitleField.value.trim().length > 0"
+            class="btn bi bi-x" aria-label="Clear"
+            (click)="getPrefTitleField.setValue('')"
+          >
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 mb-3">
+          <label for="firstDelay">Первый параметр</label>
+          <div class="form-group input-group mb-3">
+            <input class="form-control border-dark"
+                   id="firstDelay"
+                   formControlName="firstDelay"
+                   autocomplete="off"
+                   required
+                   placeholder="Первый параметр"
+                   type="number"
+                   [ngClass]="{ 'field-error': getFirstDelayField.errors }"
+            >
+            <button
+              *ngIf="getFirstDelayField.value >= 1"
+              class="btn bi bi-x" aria-label="Clear"
+              (click)="getFirstDelayField.setValue(1)"
+            >
+            </button>
+          </div>
+        </div>
+        <div class="col-4 mb-3">
+          <label for="secondDelay">Второй параметр</label>
+          <div class="form-group input-group mb-3">
+            <input class="form-control border-dark"
+                   id="secondDelay"
+                   formControlName="secondDelay"
+                   autocomplete="off"
+                   required
+                   placeholder="Второй параметр"
+                   type="number"
+                   [ngClass]="{ 'field-error': getSecondDelayField.errors }"
+            >
+            <button
+              *ngIf="getSecondDelayField.value >= 0"
+              class="btn bi bi-x" aria-label="Clear"
+              (click)="getSecondDelayField.setValue(0)"
+            >
+            </button>
+          </div>
+        </div>
+        <div class="col-4 ymb-3">
+          <label for="thirdDelay">Третий параметр</label>
+          <div class="form-group input-group mb-3">
+            <input class="form-control border-dark"
+                   id="thirdDelay"
+                   formControlName="thirdDelay"
+                   autocomplete="off"
+                   required
+                   placeholder="Третий параметр"
+                   type="number"
+                   [ngClass]="{ 'field-error': getThirdDelayField.errors }"
+            >
+            <button
+              *ngIf="getThirdDelayField.value > 1"
+              class="btn bi bi-x" aria-label="Clear"
+              (click)="getThirdDelayField.setValue(2)"
+            >
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+<div class="modal-footer d-flex justify-content-center">
+  <button type="button" class="btn btn-success" (click)="onAction()">Применить</button>
+  <button type="button" class="btn btn-danger" (click)="onCancel()">Отменить</button>
+</div>

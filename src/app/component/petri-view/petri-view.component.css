@@ -1,0 +1,111 @@
+.petri-view{
+  height: 500px;
+
+}
+.petri-title {
+  font-size: 16px;
+  text-align: center;
+}
+.state012,
+.state09,
+.state07,
+.state04,
+.state03,
+.state01,
+.state13,
+.state12,
+.state11,
+.state10,
+.state9,
+.state8,
+.state7,
+.state6,
+.state5,
+.state4,
+.state3,
+.state2,
+.state1,
+.common-state{
+  height: 10px;
+  width: 10px;
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+}
+.state01{
+  left: 155px;
+  top: -492px;
+}
+.state03{
+  left: 254px;
+  top: -522px;
+}
+.state1{
+  left: 155px;
+  top: -407px;
+}
+.state2{
+  left: 202px;
+  top: -432px;
+}
+.state3{
+  left: 254px;
+  top: -437px;
+}
+.state04{
+  left: 54px;
+  top: -280px;
+}
+.state4{
+  left: 54px;
+  top: -195px;
+}
+.state5{
+  left: 100px;
+  top: -218px;
+}
+.state6{
+  left: 88px;
+  top: -292px;
+}
+.state07{
+  left: 152px;
+  top: -320px;
+}
+.state7{
+  left: 152px;
+  top: -236px;
+}
+.state8{
+  left: 120px;
+  top: -155px;
+}
+.state09{
+  left: 309px;
+  top: -365px;
+}
+.state9{
+  left: 309px;
+  top: -284px;
+}
+.state10{
+  left: 355px;
+  top: -305px;
+}
+.state11{
+  left: 368px;
+  top: -429px;
+}
+.state12{
+  left: 408px;
+  top: -322px;
+}
+.state012{
+  left: 408px;
+  top: -406px;
+}
+.state13{
+  left: 353px;
+  top: -225px;
+}
+

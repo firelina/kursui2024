@@ -1,0 +1,42 @@
+<ng-template #content let-offcanvas>
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title" id="offcanvas-basic-title">Настройка модели</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <app-agent-view
+        [agent]="agent"
+      >
+      </app-agent-view>
+      <button type="button" class="btn bi bi-pencil action-button-config" aria-label="Edit" (click)="onAddAgent()">
+        Настроить агента
+      </button>
+      <hr />
+    </div>
+    <div>
+      <app-consumer-view [consumer]="bankomat"></app-consumer-view>
+      <button type="button" class="btn bi bi-pencil action-button-config" aria-label="Edit" (click)="onAddBankomat()">
+        Настроить банкомат
+      </button>
+      <hr />
+    </div>
+    <div>
+      <app-consumer-view [consumer]="clerk"></app-consumer-view>
+      <button type="button" class="btn bi bi-pencil action-button-config" aria-label="Edit" (click)="onAddClerk()">
+        Настроить клерков
+      </button>
+      <hr />
+    </div>
+    <div class="row">
+      <button type="button" class="col-6 btn btn-primary my_button" (click)="onTest(); offcanvas.dismiss('Cross click')" [disabled]="isDisableStart">Старт</button>
+      <button type="button" class="col-6 btn btn-secondary my_button" (click)="onStop()" [disabled]="isDisableStop">Стоп</button>
+      <button type="button" class="btn btn-secondary my_button" (click)="onRefresh()" >Обновить</button>
+    </div>
+  </div>
+</ng-template>
+
+<button class="btn bi bi-list action-button-config left-menu" aria-label="List" (click)="open(content)"></button>
+
+
+

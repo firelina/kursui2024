@@ -1,0 +1,28 @@
+<table class="table table-striped petri-table">
+  <thead>
+  <tr>
+    <th scope="col">Агент</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let agent of agentsSlice" (click)="onSelect(agent)">
+      <th scope="row" ></th>
+        <td>{{ agent.title }}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="d-flex justify-content-between p-2">
+  <ngb-pagination
+    [collectionSize]="collectionSize"
+    [(page)]="page"
+    [pageSize]="pageSize"
+    (pageChange)="refreshCountries()"
+  >
+  </ngb-pagination>
+
+<!--  <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">-->
+<!--    <option [ngValue]="2">2 items per page</option>-->
+<!--    <option [ngValue]="4">4 items per page</option>-->
+<!--    <option [ngValue]="6">6 items per page</option>-->
+<!--  </select>-->
+</div>

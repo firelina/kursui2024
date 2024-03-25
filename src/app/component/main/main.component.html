@@ -1,0 +1,64 @@
+<div class="container-fluid wrapper">
+  <header class="header-config d-flex justify-content-center">
+    <app-header
+    ></app-header>
+  </header>
+  <body class="body-config">
+  <div class="row">
+    <div class="col-1 leftside-config">
+      <app-left-side
+        [startModel]="startModel"
+        (starting)="onStart($event)"
+        (stoping)="onStop($event)"
+        (refreshing)="onRefresh($event)"
+        (agentEvent)="onSetAgent($event)"
+        (bankomatEvent)="onSetBankomat($event)"
+        (clerkEvent)="onSetClerk($event)"
+      >
+      </app-left-side>
+    </div>
+    <div class="col-10">
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+        <li [ngbNavItem]="1">
+          <button ngbNavLink
+                  (click)="onModel()"
+          >Модель</button>
+          <ng-template ngbNavContent>
+            <app-stats
+              [stats]="stats"
+            ></app-stats>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <button ngbNavLink
+            (click)="onPetri()"
+          >Петри</button>
+          <ng-template ngbNavContent>
+            <div class="row">
+              <div class="col-4">
+                <app-petri-table
+                  [petris]="agents"
+                  (selectAgent)="onSelectPetri($event)"
+                ></app-petri-table>
+              </div>
+              <div class="col-8">
+                <app-petri-view
+                [agent]="selectedPetriAgent"
+                [agents]="agents"
+                ></app-petri-view>
+              </div>
+            </div>
+
+          </ng-template>
+        </li>
+      </ul>
+
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+    </div>
+  </div>
+  </body>
+  <footer class="footer-config d-flex justify-content-center">
+    <app-footer></app-footer>
+  </footer>
+</div>

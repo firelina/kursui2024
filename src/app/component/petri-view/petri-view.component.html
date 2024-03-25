@@ -1,0 +1,28 @@
+  <div class="row petri-title" >{{title}}</div>
+  <img class="petri-view" src="assets/img/petrip2.png">
+  <div [style.background-color]="state !== 1? 'red': 'white'" class="state01"></div>
+  <div [style.background-color]="state === 1? 'red': 'white'" class="state1"></div>
+  <div [style.background-color]="state === 2? 'red': 'white'" class="state2"></div>
+  <div [style.background-color]="state !== 3? 'red': 'white'" class="state03"></div>
+  <div [style.background-color]="state === 3? 'red': 'white'" class="state3"></div>
+  <div [style.background-color]="state !== 4? 'red': 'white'" class="state04"></div>
+  <div [style.background-color]="state === 4? 'red': 'white'" class="state4"></div>
+  <div [style.background-color]="state === 5? 'red': 'white'" class="state5"></div>
+  <div [style.background-color]="state === 6? 'red': 'white'" class="state6"></div>
+  <div [style.background-color]="state !== 7? 'red': 'white'" class="state07"></div>
+  <div [style.background-color]="state === 7? 'red': 'white'" class="state7"></div>
+  <div [style.background-color]="state === 8? 'red': 'white'" class="state8"></div>
+  <div [style.background-color]="state !== 9? 'red': 'white'" class="state09"></div>
+  <div [style.background-color]="state === 9? 'red': 'white'" class="state9"></div>
+  <div [style.background-color]="state === 10? 'red': 'white'" class="state10"></div>
+  <div [style.background-color]="state === 11? 'red': 'white'" class="state11"></div>
+  <div [style.background-color]="state !== 12? 'red': 'white'" class="state012"></div>
+  <div [style.background-color]="state === 12? 'red': 'white'" class="state12"></div>
+  <div [style.background-color]="state === 13? 'red': 'white'" class="state13"></div>
+  <div class="row">
+    <button type="button" class="col-2 btn btn-primary m-3" (click)="onAuto()">Все агенты</button>
+    <button type="button" class="col-2 btn btn-secondary m-3" (click)="onByStep()">Пошагово</button>
+  </div>
+
+
+

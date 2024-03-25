@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-4">
+    <p class="my-text text-center">Банкоматы</p>
+  </div>
+  <div class="col-8">
+    <p class="my-text text-center">Клерки</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4">
+    <div class="row">
+      <div class="col"*ngFor="let b of stats.bankomats">
+        <p class="consumer-title text-center text-nowrap">{{b.title}}</p>
+        <p
+          class="bankomat text-center font-weight-bold"
+          [style.background-color]="b.isBusy ? 'red': 'green'"
+        >{{ b.serviced }}
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-8">
+    <div class="row">
+      <div class="col" *ngFor="let c of stats.clerks">
+        <p class="consumer-title text-center text-nowrap">{{c.title}}</p>
+        <p
+          class="clerk text-center font-weight-bold"
+          [style.background-color]="c.isBusy ? 'red': 'green'"
+        >{{ c.serviced }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4">
+    <div class="row">
+      <div class="col"*ngFor="let b of stats.bankomats">
+        <p *ngIf="b.isBusy" class="consumer-title">Клиент</p>
+        <p *ngIf="b.isBusy" class="clerk"></p>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-8">
+    <div class="row">
+      <div class="col" *ngFor="let c of stats.clerks">
+        <p *ngIf="c.isBusy" class="consumer-title">Клиент</p>
+        <p *ngIf="c.isBusy" class="clerk"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4">
+    <p class="my-text">Очередь в банкомат {{stats.sizeBankomatQueue}} человек</p>
+  </div>
+  <div class="col-8">
+    <p class="my-text">Очередь к сотрудникам {{stats.sizeClerktQueue}} человек</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4">
+    <p class="my-text">Не обслуженные клиенты банкоматов {{stats.bankomatNotServed}} человек</p>
+  </div>
+  <div class="col-8">
+    <p class="my-text">Не обслуженные клиенты сотрудников {{stats.clerkNotServed}} человек</p>
+  </div>
+</div>

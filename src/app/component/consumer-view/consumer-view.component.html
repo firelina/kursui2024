@@ -1,0 +1,12 @@
+<div *ngIf="consumer" class="row">
+  <p>Заголовок: {{consumer.prefTitle}}</p>
+</div>
+<div *ngIf="consumer" class="row">
+  <p class="col-6">Кол-во={{consumer.count}}</p>
+  <p class="col-6">Ожидание={{consumer.timeLimit}}</p>
+</div>
+<div *ngIf="consumer" class="row">
+  <p class="col-4">П1={{consumer.firstDelay}}</p>
+  <p class="col-4">П2={{consumer.secondDelay}}</p>
+  <p class="col-4">П3={{consumer.thirdDelay}}</p>
+</div>
